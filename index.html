@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Silvia Meilani</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --soft-pink: #ffdae9;
+            --hot-pink: #ff85a1;
+            --dark-pink: #f06292;
+            --white: #ffffff;
+            --text-color: #5d4037;
+        }
+
+        body {
+            background-color: var(--soft-pink);
+            font-family: 'Quicksand', sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background: var(--white);
+            max-width: 800px;
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(255, 133, 161, 0.3);
+            overflow: hidden;
+            border: 5px solid var(--hot-pink);
+        }
+
+        /* Header Section */
+        header {
+            background: var(--hot-pink);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 30px;
+        }
+
+        h3 {
+            color: var(--dark-pink);
+            border-bottom: 2px dashed var(--hot-pink);
+            padding-bottom: 5px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        /* Info Grid */
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-item b {
+            color: var(--dark-pink);
+        }
+
+        /* List Styling */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #fff0f5;
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-radius: 15px;
+            border-left: 5px solid var(--hot-pink);
+        }
+
+        .badge {
+            background: var(--hot-pink);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            float: right;
+        }
+
+        /* Footer / Sosmed */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--soft-pink);
+        }
+
+        .insta-link {
+            text-decoration: none;
+            color: var(--dark-pink);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .insta-link:hover {
+            color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="WhatsApp Image 2026-02-04 at 23.21.55.jpeg" alt="Foto Silvia" class="profile-img">
+        <h1>Silvia Meilani</h1>
+        <p>✨ Makeup Enthusiast | Adventurer ✨</p>
+    </header>
+
+    <div class="content">
+        <div class="section">
+            <h3>Tentang Diri</h3>
+            <p>Halo! Saya Silvia, seorang siswi SMA yang ceria dan menyukai dunia kecantikan. Saya memiliki minat besar dalam seni makeup dan aktif dalam kegiatan organisasi di sekolah.</p>
+        </div>
+
+        <div class="section">
+            <h3>Biodata Diri</h3>
+            <div class="grid-info">
+                <div class="info-item"><b>Tahun Lahir:</b> 24 Mei 2008</div>
+                <div class="info-item"><b>Telepon:</b> 083818934025</div>
+                <div class="info-item"><b>Hobby:</b> Menonton Film 🍿</div>
+                <div class="info-item"><b>Bahasa:</b> Indonesia</div>
+            </div>
+            <p style="margin-top: 15px;"><b>Alamat:</b> Kp. Kawung Sari RT 03 RW 11</p>
+        </div>
+
+        <div class="section">
+            <h3>Pendidikan</h3>
+            <ul>
+                <li>SD (Lulus 2019) <span class="badge">Selesai</span></li>
+                <li>SMP (Lulus 2023) <span class="badge">Selesai</span></li>
+                <li>SMA (Lulus 2026) <span class="badge">Ongoing</span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Pengalaman & Organisasi</h3>
+            <ul>
+                <li><b>Drum Band</b> (SD)</li>
+                <li><b>Seni Tari</b> (SMP)</li>
+                <li><b>Pecinta Alam</b> (SMA) <span class="badge">2022 - 2024</span></li>
+            </ul>
+        </div>
+
+        <div class="section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+                <h3>Keahlian</h3>
+                <ul>
+                    <li>🎨 Makeup Artistik</li>
+                    <li>🤝 Kerjasama Tim</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Sertifikat</h3>
+                <ul>
+                    <li>🏆 Drum Band</li>
+                    <li>🧗 Pecinta Alam</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Let's Be Friend! 💖</p>
+        <a href="https://instagram.com/meymeylni" class="insta-link">@meymeylni</a>
+    </div>
+</div>
+
+</body>
+</html>
+</body>
+</html>
