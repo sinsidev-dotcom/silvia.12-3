@@ -11,196 +11,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Silvia Meilani</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <title>CV - Muhammad Afrizal Firdaus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --soft-pink: #ffdae9;
-            --hot-pink: #ff85a1;
-            --dark-pink: #f06292;
-            --white: #ffffff;
-            --text-color: #5d4037;
+            --primary: #1a2a6c; /* Biru Gelap Sporty */
+            --accent: #00f2fe;  /* Biru Muda Neon */
+            --text-dark: #2c3e50;
+            --bg-light: #f4f7f6;
         }
 
         body {
-            background-color: var(--soft-pink);
-            font-family: 'Quicksand', sans-serif;
-            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
             margin: 0;
             padding: 20px;
-            display: flex;
-            justify-content: center;
+            color: var(--text-dark);
         }
 
-        .container {
-            background: var(--white);
-            max-width: 800px;
-            width: 100%;
-            border-radius: 30px;
-            box-shadow: 0 10px 25px rgba(255, 133, 161, 0.3);
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             overflow: hidden;
-            border: 5px solid var(--hot-pink);
+            display: flex;
+            flex-wrap: wrap;
         }
 
-        /* Header Section */
-        header {
-            background: var(--hot-pink);
+        /* Sidebar / Header */
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+            background: var(--primary);
             color: white;
+            padding: 40px 30px;
             text-align: center;
-            padding: 40px 20px;
-            position: relative;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 5px solid var(--white);
+            border: 5px solid var(--accent);
             object-fit: cover;
-            background-color: #eee;
+            margin-bottom: 20px;
+            background: #eee;
         }
 
-        header h1 {
-            font-family: 'Pacifico', cursive;
-            font-size: 2.5rem;
-            margin: 10px 0;
+        .sidebar h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            line-height: 1.2;
         }
 
-        /* Main Content */
-        .content {
-            padding: 30px;
+        .sidebar p {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
-        h3 {
-            color: var(--dark-pink);
-            border-bottom: 2px dashed var(--hot-pink);
-            padding-bottom: 5px;
-            display: inline-block;
+        .contact-info {
+            text-align: left;
+            margin-top: 30px;
+            font-size: 0.85rem;
+        }
+
+        .contact-item {
             margin-bottom: 15px;
         }
 
-        .section {
-            margin-bottom: 25px;
+        .contact-item b {
+            display: block;
+            color: var(--accent);
         }
 
-        /* Info Grid */
-        .grid-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+        /* Main Content */
+        .main-content {
+            flex: 2;
+            min-width: 400px;
+            padding: 40px;
         }
 
-        .info-item b {
-            color: var(--dark-pink);
+        h3 {
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 30px;
         }
 
-        /* List Styling */
-        ul {
+        .section-content {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .tag-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #e1e8f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .timeline {
             list-style: none;
             padding: 0;
         }
 
-        li {
-            background: #fff0f5;
-            margin-bottom: 8px;
-            padding: 10px 15px;
-            border-radius: 15px;
-            border-left: 5px solid var(--hot-pink);
+        .timeline li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            border-left: 2px solid #ddd;
         }
 
-        .badge {
-            background: var(--hot-pink);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-size: 0.8rem;
-            float: right;
-        }
-
-        /* Footer / Sosmed */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: var(--soft-pink);
-        }
-
-        .insta-link {
-            text-decoration: none;
-            color: var(--dark-pink);
+        .year {
             font-weight: bold;
-            font-size: 1.1rem;
+            color: var(--primary);
+            font-size: 0.9rem;
         }
 
-        .insta-link:hover {
-            color: #d81b60;
+        .social-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        @media (max-width: 600px) {
+            .cv-container { flex-direction: column; }
+            .main-content { min-width: unset; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <img src="WhatsApp Image 2026-02-04 at 23.21.55.jpeg" alt="Foto Silvia" class="profile-img">
-        <h1>Silvia Meilani</h1>
-        <p>✨ Makeup Enthusiast | Adventurer ✨</p>
-    </header>
+<div class="cv-container">
+    <div class="sidebar">
+        <img src="WhatsApp Image 2026-02-04 at 22.59.13.jpeg" alt="Foto Afrizal" class="profile-img">
+        <h1>MUHAMMAD AFRIZAL FIRDAUS</h1>
+        <p>Student & Football Athlete</p>
 
-    <div class="content">
-        <div class="section">
-            <h3>Tentang Diri</h3>
-            <p>Halo! Saya Silvia, seorang siswi SMA yang ceria dan menyukai dunia kecantikan. Saya memiliki minat besar dalam seni makeup dan aktif dalam kegiatan organisasi di sekolah.</p>
-        </div>
-
-        <div class="section">
-            <h3>Biodata Diri</h3>
-            <div class="grid-info">
-                <div class="info-item"><b>Tahun Lahir:</b> 24 Mei 2008</div>
-                <div class="info-item"><b>Telepon:</b> 083818934025</div>
-                <div class="info-item"><b>Hobby:</b> Menonton Film 🍿</div>
-                <div class="info-item"><b>Bahasa:</b> Indonesia</div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <b>Tahun Lahir</b>
+                12 April 2008
             </div>
-            <p style="margin-top: 15px;"><b>Alamat:</b> Kp. Kawung Sari RT 03 RW 11</p>
-        </div>
-
-        <div class="section">
-            <h3>Pendidikan</h3>
-            <ul>
-                <li>SD (Lulus 2019) <span class="badge">Selesai</span></li>
-                <li>SMP (Lulus 2023) <span class="badge">Selesai</span></li>
-                <li>SMA (Lulus 2026) <span class="badge">Ongoing</span></li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Pengalaman & Organisasi</h3>
-            <ul>
-                <li><b>Drum Band</b> (SD)</li>
-                <li><b>Seni Tari</b> (SMP)</li>
-                <li><b>Pecinta Alam</b> (SMA) <span class="badge">2022 - 2024</span></li>
-            </ul>
-        </div>
-
-        <div class="section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div>
-                <h3>Keahlian</h3>
-                <ul>
-                    <li>🎨 Makeup Artistik</li>
-                    <li>🤝 Kerjasama Tim</li>
-                </ul>
+            <div class="contact-item">
+                <b>Telepon</b>
+                085759864364
             </div>
-            <div>
-                <h3>Sertifikat</h3>
-                <ul>
-                    <li>🏆 Drum Band</li>
-                    <li>🧗 Pecinta Alam</li>
-                </ul>
+            <div class="contact-item">
+                <b>Alamat</b>
+                Jln. Pasigaran, Kec. Dayeuhkolot, Kab. Bandung
+            </div>
+            <div class="contact-item">
+                <b>Sosial Media</b>
+                <a href="https://instagram.com/12.zaltwelve" class="social-link">IG: @12.zaltwelve</a>
             </div>
         </div>
     </div>
 
-    <div class="footer">
-        <p>Let's Be Friend! 💖</p>
-        <a href="https://instagram.com/meymeylni" class="insta-link">@meymeylni</a>
+    <div class="main-content">
+        <div class="section">
+            <h3>Tentang Diri</h3>
+            <div class="section-content">
+                Saya adalah seorang pelajar yang disiplin, kompetitif, dan memiliki semangat tinggi dalam kerja sama tim. Sebagai penggemar olahraga khususnya sepak bola, saya terbiasa melatih fisik dan mental untuk mencapai target yang maksimal.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Pendidikan</h3>
+            <ul class="timeline">
+                <li>
+                    <span class="year">Lulus 2026</span><br>
+                    Sekolah Menengah Atas (SMA)
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Pengalaman Organisasi</h3>
+            <ul class="timeline">
+                <li>
+                    <span class="year">2023 - 2026</span><br>
+                    Organisasi SMA
+                </li>
+                <li>
+                    <span class="year">2020 - 2023</span><br>
+                    Organisasi SMP
+                </li>
+                <li>
+                    <span class="year">2014 - 2020</span><br>
+                    Organisasi SD
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Keahlian & Hobby</h3>
+            <div class="tag-container">
+                <span class="tag">⚽ Sepak Bola (Hobby & Skill)</span>
+                <span class="tag">🏃 Atletik</span>
+                <span class="tag">👥 Team Work</span>
+                <span class="tag">🇮🇩 Bahasa Indonesia</span>
+                <span class="tag">🗣️ Bahasa Sunda</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Sertifikat & Penghargaan</h3>
+            <div class="section-content">
+                ✅ <b>Juara / Peserta O2SN SD</b> - Cabang Olahraga Sepak Bola
+            </div>
+        </div>
     </div>
 </div>
 
